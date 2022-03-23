@@ -27,8 +27,7 @@ const beyonceHash = {
 
 // 1. Print all the songs
 function printAllSongs(){
-  const allSongs = (beyonceHash.hits)
-  console.log(allSongs)
+  console.log(beyonceHash.hits)
 }
 printAllSongs()
 
