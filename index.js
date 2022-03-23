@@ -57,8 +57,8 @@ allFiercenessRatings()
 
 // 5. Return all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
 function songsWithBodySuits() {
-  const allSongs = beyonceHash.hits.map(hit => hit.signature_look(bodysuit))
-  console.log(allSongs)
+  const bodySuits = beyonceHash.hits.filter(hit => hit.signature_look.includes("bodysuit") || hit.video_theme.includes("bodysuit"))
+  console.log(bodySuits)
 }
 songsWithBodySuits()
 
