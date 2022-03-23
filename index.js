@@ -26,24 +26,41 @@ const beyonceHash = {
 };
 
 // 1. Print all the songs
-function printAllSongs() {
+function printAllSongs(){
+  const allSongs = (beyonceHash.hits)
+  console.log(allSongs)
 }
+printAllSongs()
 
 // 2. Print all the movies
 function printAllMovies() {
+  const allMovies = (beyonceHash.movies)
+  console.log(allMovies)
 }
+printAllMovies()
 
 // 3. Return an array of all Beyonce's hit song titles
 function hitSongTitles() {
+  const allSongs = beyonceHash.hits.map(hit => hit.title)
+  console.log(allSongs)
 }
+hitSongTitles()
+
 
 // 4. Return an array of all Beyonce's fierceness ratings
 function allFiercenessRatings() {
+  const allSongs = beyonceHash.hits.map(hit => hit.fierceness)
+  console.log(allSongs)
 }
+allFiercenessRatings()
+
 
 // 5. Return all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
 function songsWithBodySuits() {
+  const allSongs = beyonceHash.hits.map(hit => hit.signature_look(bodysuit))
+  console.log(allSongs)
 }
+songsWithBodySuits()
 
 // 6. Return an array with all of the songs where Beyonce's fierceness is greater than or equal to a given number
 function getSongsByFiercenessGTE() {
