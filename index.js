@@ -44,14 +44,11 @@ function hitSongTitles() {
 }
 hitSongTitles()
 */
-
 // 4. Return an array of all Beyonce's fierceness ratings
 function allFiercenessRatings() {
-  const allSongs = beyonceHash.hits.map(hit => hit.fierceness)
-  console.log(allSongs)
+  console.log(beyonceHash.hits.map(hit => hit.fierceness))
 }
 allFiercenessRatings()
-
 /*
 // 5. Return all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
 function songsWithBodySuits() {
@@ -113,15 +110,15 @@ fiercestHits()
 
 // 13. Return the sum of Beyonce's fierceness value for all of her hit songs
 function hitFiercenessSum() {
-  result = beyonceHash.hits.map(hit => hit.fierceness)
-  console.log(result.reduce((sum, totalFierce) => sum +totalFierce))
+  console.log(beyonceHash.hits.map(hit => hit.fierceness).reduce((sum, totalFierce) => sum + totalFierce))
 }
 hitFiercenessSum()
 
+/*
 // 14. Return the average fierceness value for all Beyonce's hit songs
 function hitFiercenessAverage() {
 }
-/*
+
 // 15. Return the sum of Beyonce's rating value for all of her movies
 function ratingSum() {
 }
