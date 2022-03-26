@@ -24,7 +24,7 @@ const beyonceHash = {
     { title: 'The Fighting Temptations', year: 2003, rating: 5}
   ]
 };
-/*
+
 // 1. Print all the songs
 function printAllSongs(){
   console.log(beyonceHash.hits)
@@ -99,31 +99,40 @@ console.log(fiercestHits())
 
 // 13. Return the sum of Beyonce's fierceness value for all of her hit songs
 function hitFiercenessSum() {
-  return beyonceHash.hits.map(hit => hit.fierceness).reduce((sum, totalFierce) => sum + totalFierce)
+  return allFiercenessRatings().reduce((sum, totalFierce) => sum + totalFierce)
 }
 console.log(hitFiercenessSum())
-*/
+
 // 14. Return the average fierceness value for all Beyonce's hit songs
 function hitFiercenessAverage() {
-  return beyonceHash.hits.map(hit => hit.fierceness).reduce((sum, totalFierce) => sum + totalFierce) / beyonceHash.hits.length
+  return hitFiercenessSum() / beyonceHash.hits.length
 }
 console.log(hitFiercenessAverage())
-/*
+
 // 15. Return the sum of Beyonce's rating value for all of her movies
 function ratingSum() {
+  return beyonceHash.movies.map(movie => movie.rating).reduce((sum, totalRate) => sum + totalRate)
 }
+console.log(ratingSum())
 
 // 16. Return the average rating value for all of her movies
 function ratingAverage() {
+  return ratingSum() / beyonceHash.movies.length
 }
+console.log(ratingAverage())
 
 // 17. Return the sum of the total number of dancers in all of the hit song videos
 function hitDancerSum() {
+  return beyonceHash.hits.map(hit => hit.dancers).reduce((sum, totalDancers) => sum + totalDancers)
 }
+console.log(hitDancerSum())
 
 // 18. Return an array of Beyonce's hairstyles without repeats
 function uniqueHairstyles() {
+ return beyonceHash.hits.map(hit => hit.hair).reduce((array, hair) => array + hair)  // NOT CORRECT, STILL NEED TO REMOVE REPEATS
+
 }
+console.log(uniqueHairstyles())
 
 // 19. Return an object where the properties are song names and the value is an object which contains that song's fierceness and the average fierceness for all songs
 function songFiercenessByName() {
@@ -136,4 +145,3 @@ function movieRatingsByName() {
 // 21. Return an object with Beyonce's hairstyles as the keys and a tally of each hairstyle, eg. `{ "blonde": 3, ... }`
 function hairStyleFrequency() {
 }
-*/
