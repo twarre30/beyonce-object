@@ -129,8 +129,7 @@ console.log(hitDancerSum())
 
 // 18. Return an array of Beyonce's hairstyles without repeats
 function uniqueHairstyles() {
- return beyonceHash.hits.map(hit => hit.hair).reduce((array, hair) => array + hair)  // NOT CORRECT, STILL NEED TO REMOVE REPEATS
-
+  return [...new Set(beyonceHash.hits.map(hit => hit.hair).reduce((array, hair) => array.concat(hair), []))]
 }
 console.log(uniqueHairstyles())
 
