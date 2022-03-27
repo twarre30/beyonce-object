@@ -135,7 +135,13 @@ console.log(uniqueHairstyles())
 
 // 19. Return an object where the properties are song names and the value is an object which contains that song's fierceness and the average fierceness for all songs
 function songFiercenessByName() {
+  return ({
+      Songs: hitSongTitles(),
+      Fierceness: allFiercenessRatings(),
+      AverageFierceness: hitFiercenessAverage()
+  })
 }
+console.log(songFiercenessByName())
 
 // 20. Return an object where the properties are movie names and the value is an object which contains that movie's rating and the average rating for all movies
 function movieRatingsByName() {
